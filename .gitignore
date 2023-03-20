@@ -128,5 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+sample
+sample_code
 sample_data.py
 download.txt
+linklist.txt

@@ -2,8 +2,8 @@ import requests;
 from pathlib import Path;
 import sys;
 sys.path.append(str(Path(__file__).resolve().parent.parent));
-import sample_data;
-import codecs
+import sample.sample_data as sample_data;
+import codecs;
 
 url = sample_data.sample_url;
 response = requests.get(url);

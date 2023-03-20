@@ -3,9 +3,10 @@ from pathlib import Path;
 import sys;
 sys.path.append(str(Path(__file__).resolve().parent.parent));
 import sample.sample_data as sample_data;
+from bs4 import BeautifulSoup;
 
-url = sample_data.sample_url;
-response = requests.get(url);
-print(response);
-response.encoding = response.apparent_encoding;
-print(response.text);
+url = sample_data.sample_url_1;
+html = requests.get(url);
+soup = BeautifulSoup(html.content, "html.parser");
+
+print(soup);
