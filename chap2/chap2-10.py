@@ -4,7 +4,7 @@ import sys;
 sys.path.append(str(Path(__file__).resolve().parent.parent));
 import sample.sample_data as sample_data;
 from bs4 import BeautifulSoup;
-import urllib
+import urllib;
 
 url = sample_data.sample_url_2;
 html = requests.get(url);

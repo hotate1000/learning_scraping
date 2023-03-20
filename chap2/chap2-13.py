@@ -10,13 +10,11 @@ url = sample_data.sample_url_2;
 html = requests.get(url);
 soup = BeautifulSoup(html.content, "html.parser");
 
-for element in soup.find_all('a'):
-    print(element.text);
-    url_href = element.get("href");
-    print(url_href);
-print('---------');
-for element in soup.find_all('a'):
-    print(element.text);
-    url_href = element.get("href");
-    link_url = urllib.parse.urljoin(url, url_href);
-    print(link_url);
+for element in soup.find_all("img"):
+    src = element.get("src");
+    print('------');
+    print(src);
+    print('------');
+    image_url = urllib.parse.urljoin(url, src);
+    filename = image_url.split("/")[-1];
+    print(src, ">>", filename);
