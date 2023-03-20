@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup;
 import urllib;
 import time;
 
-url = sample_data.image_url_1;
+url = sample_data.sample_url_2;
 html = requests.get(url);
 soup = BeautifulSoup(html.content, "html.parser");
 
@@ -18,8 +18,7 @@ for element in soup.find_all("img"):
     src = element.get("src");
 
     image_url = urllib.parse.urljoin(url, src);
-    img_data = requests.get(url);
-
+    img_data = requests.get(image_url);
     filename = image_url.split("/")[-1];
     out_path = out_folder.joinpath(filename);
 
