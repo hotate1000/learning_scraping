@@ -31,9 +31,9 @@ print("「名前」の列を削除\n", df.drop("名前", axis=1));
 print("インデックス2の行を削除\n", df.drop(2, axis=0));
 print("--------");
 
-data_n = df[df["国語"] >= 90]
+data_n = df[df["国語"] >= 90];
 print("国語が90点以上\n", data_n);
-data_m = df[df["数学"] <= 70]
+data_m = df[df["数学"] <= 70];
 print("数学が70点以下\n", data_m);
 print("--------");
 
